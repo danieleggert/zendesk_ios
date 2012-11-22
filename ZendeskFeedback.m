@@ -64,19 +64,19 @@ static NSString * const ZendeskURLDoesNotExistException = @"ZDURLDoesNotExist";
 		[body appendString:@"&"];
         [body appendString:ZendeskFeedbackEmail];
         [body appendString:@"="];
-        [body appendString:email];
+        [body appendString:[self encodeStringForPost:email]];
     }
     if (subject != nil) {
 		[body appendString:@"&"];
         [body appendString:ZendeskFeedbackSubject];
         [body appendString:@"="];
-        [body appendString:subject];
+        [body appendString:[self encodeStringForPost:subject]];
     }
     if (description != nil) {
 		[body appendString:@"&"];
         [body appendString:ZendeskFeedbackDescription];
         [body appendString:@"="];
-        [body appendString:description];
+        [body appendString:[self encodeStringForPost:description]];
     }
     [body appendString:@"&via_id=17"];
     [body appendString:@"&commit="];

@@ -64,12 +64,12 @@ enum {
 
 @optional
 // Sent when the ticket is submitted to Zendesk server successfully
-- (void)submissionDidFinishLoadingForZendeskFeedback:(ZendeskFeedback *)dropbox;
+- (void)submissionDidFinishLoadingForZendeskFeedback:(ZendeskFeedback *)feedback;
 
 // Sent when ticket submission failed
 - (void)zendeskFeedback:(ZendeskFeedback *)dropbox submissionDidFailWithError:(NSError *)error;
 
 // Sent when connected to Zendesk server
-- (void)submissionConnectedToServerForZendeskFeedback:(ZendeskFeedback *)dropbox;
+- (void)submissionConnectedToServerForZendeskFeedback:(ZendeskFeedback *)feedback;
 
 @end
